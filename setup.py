@@ -1,0 +1,42 @@
+#!/usr/bin/env python
+
+"""The setup script."""
+
+from setuptools import setup, find_packages
+
+requirements = [ ]
+
+test_requirements = [ ]
+
+setup(
+    author="Wang Jiaxuan",
+    author_email='poormouse@126.com',
+    python_requires='>=3.6',
+    classifiers=[
+        'Development Status :: 2 - Pre-Alpha',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: BSD License',
+        'Natural Language :: English',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+    ],
+    description="Wang Jiaxuan' scripts",
+    entry_points={
+        'console_scripts': [
+            'wojopy=wojopy.cli:main',
+        ],
+    },
+    install_requires=requirements,
+    license="BSD license",
+    include_package_data=True,
+    keywords='wojopy',
+    name='wojopy',
+    packages=find_packages(include=['wojopy', 'wojopy.*']),
+    test_suite='tests',
+    tests_require=test_requirements,
+    url='https://github.com/wangjiaxuan666/Wojopy',
+    version='0.1.1',
+    zip_safe=False,
+)
